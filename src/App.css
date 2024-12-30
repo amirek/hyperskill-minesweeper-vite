@@ -9,7 +9,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  text-align: center;
   min-height: 100vh;
 
 }
@@ -38,7 +37,7 @@ body {
 
 .App-link {
   color: #61dafb;
-  font-family: "American Typewriter";
+  font-family: "serif";
 }
 
 @keyframes App-logo-spin {
@@ -57,11 +56,6 @@ body {
   align-items: center;
   width: 400px;
   flex-direction: column;
-
-  /* shadow */
-  /*padding: 5px;*/
-  /*-webkit-box-shadow: 10px 10px 5px #888;*/
-  /*padding: 5px 5px 5px 15px;*/
   margin-top: 15px;
 
   min-width: 300px;
@@ -69,20 +63,20 @@ body {
   box-shadow: 20px 20px 30px 0 darkred
 }
 .ControlPanel{
-  /*background-color: #606060;*/
-  /*flex: 0 0 100%;*/
   color: white;
 }
 
 .Title{
   font-size: 30px;
   font-style: oblique;
-  font-family: Silom;
+  font-family: Silom, serif;
   flex-basis: 200%;
   text-shadow: 5px 5px 10px darkred;
 }
 
 .Cp-logo {
+  margin-top: 10px;
+  margin-left: 10px;
   height: 40px;
   pointer-events: none;
 }
@@ -102,17 +96,13 @@ body {
 }
 
 .Field{
-  /*background-color: #7e7e7e;*/
-  /*flex: 0 0 100%;*/
   order: 3;
   user-select: none;
   position: relative;
-  margin: 10px 10px 30px 10px;
+  margin: 10px 10px 30px 30px;
   width: 20em; height: 22em;
   display: flex;
   flex-flow: row wrap;
-  /*border: solid #808080;*/
-  /*border-width: 1px 0 0 1px;*/
 }
 .Cell{
   background-color: #323232;
@@ -122,6 +112,7 @@ body {
   height: 30px;
 }
 .Cell-empty{
+  text-align: match-parent;
   box-shadow: 0 0 5px 3px darkgreen;
   color: red;
 }
@@ -146,9 +137,7 @@ body {
 }
 .Column {
   display: table-cell;
-  /*background-color: red;*/
 }
 .Reset {
   font-size: 3em;
-  /*background-color: red;*/
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import bombIcon from './assets/react.svg'
 
 import './App.css'
@@ -44,7 +44,7 @@ const Result = ({gameResult, handleResetGame}) => {
 function timeFormat(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = seconds % 60;
-  return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')} ⏱️`;
+  return `⏱️${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
 
 const Timer = ({gameOn, gameReset}) => {
@@ -63,6 +63,6 @@ const Timer = ({gameOn, gameReset}) => {
   }, [gameOn, gameReset]);
 
   return(
-    <div>{timeFormat(time)}</div>
+    <div className="Column">{timeFormat(time)}</div>
   )
 }

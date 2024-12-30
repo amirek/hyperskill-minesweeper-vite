@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Field} from "./Field.jsx";
 import {ControlPanel} from "./ControlPanel.jsx";
 import './App.css'
@@ -6,7 +6,7 @@ import './App.css'
 export const MainGame = (props) => {
   const cols = props.cols;
   const rows = props.rows;
-  const bombs = props.bombs;
+  const bombs = Math.min(cols*rows - 1, props.bombs);
 
   const [gameOn, setGameOn] = useState(false);
   const [gameResult, setGameResult] = useState(0);
@@ -50,7 +50,7 @@ export const MainGame = (props) => {
     }
     // console.log(`TRAVERSING CELL: [${row}][${column}]: isOpen: ${game[row][column].isOpen} count: ${game[row][column].count}`);
 
-    if(!game[row][column].isOpen && !game[row][column].isBomb){
+    if(!game[row][column].isOpen && !game[row][column].isBomb && !game[row][column].isFlagged){
       game[row][column].isOpen = true;
       if(game[row][column].count === 0) {
         openManyCells(game, row - 1, column);
@@ -86,7 +86,7 @@ export const MainGame = (props) => {
   const openCell = (row, column) => {
     let gameCopy = [...game];
     let cell = gameCopy[row][column];
-    if(cell.isOpen || cell.isFlagged){
+    if(cell.isOpen || cell.isFlagged || gameResult !== 0){
       return;
     }
 

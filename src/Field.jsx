@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 export const Field = (props) => {
   return (<div className="Field">
@@ -30,9 +30,7 @@ const Cell = (props) => {
   }
 
   const renderText = () => {
-    // if(props.data.isFlagged) return "";
-    // if(props.data.isBomb) return "B";
-    if (props.data.isOpen && props.data.count > 0) return props.data.count;
+    if (props.data.isOpen && !props.data.isBomb && !props.data.isFlagged && props.data.count > 0) return props.data.count;
     return "";
   }
   // style

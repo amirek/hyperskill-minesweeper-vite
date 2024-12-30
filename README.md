@@ -1,8 +1,15 @@
-# React + Vite
+# Hyperskill's Minesweeper with React (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project details: https://hyperskill.org/projects/108
 
-Currently, two official plugins are available:
+Start with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`npm run dev`
+
+Right click to flag/unflag, Left click to open a cell. 
+
+To win all bombs must be flagged, and all other cells must be open.
+
+Here's the gameplay:
+
+<img alt="gameplay recording" src="gameplay.gif"/>
