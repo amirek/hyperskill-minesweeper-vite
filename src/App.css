@@ -1,0 +1,154 @@
+body {
+  background-color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  min-height: 100vh;
+
+}
+
+.App-logo {
+  height: 40px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+  font-family: "American Typewriter";
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Game{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  flex-direction: column;
+
+  /* shadow */
+  /*padding: 5px;*/
+  /*-webkit-box-shadow: 10px 10px 5px #888;*/
+  /*padding: 5px 5px 5px 15px;*/
+  margin-top: 15px;
+
+  min-width: 300px;
+
+  box-shadow: 20px 20px 30px 0 darkred
+}
+.ControlPanel{
+  /*background-color: #606060;*/
+  /*flex: 0 0 100%;*/
+  color: white;
+}
+
+.Title{
+  font-size: 30px;
+  font-style: oblique;
+  font-family: Silom;
+  flex-basis: 200%;
+  text-shadow: 5px 5px 10px darkred;
+}
+
+.Cp-logo {
+  height: 40px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Cp-logo {
+    animation: Cp-logo-spin infinite 10s linear;
+  }
+}
+@keyframes Cp-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Field{
+  /*background-color: #7e7e7e;*/
+  /*flex: 0 0 100%;*/
+  order: 3;
+  user-select: none;
+  position: relative;
+  margin: 10px 10px 30px 10px;
+  width: 20em; height: 22em;
+  display: flex;
+  flex-flow: row wrap;
+  /*border: solid #808080;*/
+  /*border-width: 1px 0 0 1px;*/
+}
+.Cell{
+  background-color: #323232;
+  border: none;
+  margin: 4px;
+  width: 30px;
+  height: 30px;
+}
+.Cell-empty{
+  box-shadow: 0 0 5px 3px darkgreen;
+  color: red;
+}
+.Cell-marked{
+  box-shadow: 0 0 5px 3px darkgrey;
+}
+.Cell-marked::before{
+  content: "💀"
+}
+.Cell-bomb{
+  box-shadow: 0 0 5px 3px red;
+  background-color: red;
+}
+.Cell-bomb::before{
+  content: "💣"
+}
+.Row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 10px;
+}
+.Column {
+  display: table-cell;
+  /*background-color: red;*/
+}
+.Reset {
+  font-size: 3em;
+  /*background-color: red;*/
+}
